@@ -8,15 +8,15 @@ const Contact = () => {
       <Typography textAlign='center' fontWeight='bold' variant="h5" component='h3' mb={4}>Contáctame</Typography>
       <Container maxWidth="xs" style={{ alignItems: 'center', marginTop: 32, paddingLeft: 30, paddingRight: 30 }}>
         <Stack direction='row' spacing={2} alignItems='center' justifyContent='space-evenly'>
-          <Link href='google.com' textAlign='center' fontSize={10} style={{ textDecoration: 'none', color: '#e0e0e0' }}>
+          <Link href='https://wa.me/send?phone=5493644321922' target='_blank' textAlign='center' fontSize={10} style={{ textDecoration: 'none', color: '#e0e0e0' }}>
             <WhatsappOutlined color='success' />{<br />}
             WhatsApp
           </Link>
-          <Link href='google.com' textAlign='center' fontSize={10} style={{ textDecoration: 'none', color: '#e0e0e0' }}>
+          <Link href='https://fb.com' target='_blank' textAlign='center' fontSize={10} style={{ textDecoration: 'none', color: '#e0e0e0' }}>
             <FacebookOutlined color='info' />{<br />}
             Facebook
           </Link>
-          <Link href='google.com' textAlign='center' fontSize={10} style={{ textDecoration: 'none', color: '#e0e0e0' }}>
+          <Link href='mailto:devcernik@gmail.com' target='_blank' textAlign='center' fontSize={10} style={{ textDecoration: 'none', color: '#e0e0e0' }}>
             <MailOutline color='warning' />{<br />}
             Correo
           </Link>
