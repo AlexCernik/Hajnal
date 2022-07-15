@@ -1,25 +1,29 @@
-import { Box, ImageList, Typography, ImageListItem, useMediaQuery, useTheme } from '@mui/material'
+import React from 'react';
+import { Container, Box, ImageList, Typography, ImageListItem, useMediaQuery, useTheme } from '@mui/material'
 
 const Gallery = () => {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  const xsUp = useMediaQuery(theme.breakpoints.only('xs'));
+  const lgDown = useMediaQuery(theme.breakpoints.down('lg'));
 
   return (
-    <Box id='2' mb={{ xs: 10, sm: 20 }}>
-      <Typography textAlign='center' fontWeight='bold' variant="h5" component='h3'>Mis proyectos</Typography>
-      <ImageList style={{ width: '100%', height: '100%', paddingBottom: 10 }} cols={matches ? 3 : 2} gap={8}>
-        {itemData.map((item) => (
-          <ImageListItem key={item.img} style={{ height: 200, boxShadow: '0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)' }}>
-            <img
-              src={item.img}
-              alt={item.title}
-              loading="lazy"
-              style={{ objectFit: 'cover', borderRadius: 6, width: '100%', height: '100%', fontSize: 0, backgroundColor: 'rgba(0,0,0,0.2)' }}
-            />
-          </ImageListItem>
-        ))}
-      </ImageList>
-    </Box>
+    <Container maxWidth='lg'>
+      <Box id='2' mb={10}>
+        <Typography textAlign='center' fontWeight='bold' variant="h5" component='h3'>Mis proyectos</Typography>
+        <ImageList style={{ width: '100%', height: '100%', paddingBottom: 10 }} gap={8} cols={xsUp ? 1 : lgDown ? 2 : 3}>
+          {itemData.map((item) => (
+            <ImageListItem key={item.img} style={{ height: 260, borderRadius: 6, boxShadow: '0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)' }}>
+              <img
+                src={item.img}
+                alt={item.title}
+                loading="lazy"
+                style={{ objectFit: 'cover', borderRadius: 6, width: '100%', height: '100%', fontSize: 0, backgroundColor: 'rgba(0,0,0,0.2)' }}
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </Box>
+    </Container>
   );
 }
 export default Gallery;

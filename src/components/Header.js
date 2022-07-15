@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import '../styles.css';
 import { AppBar, Toolbar, Container, Stack } from '@mui/material'
 import { Link } from 'react-scroll';
@@ -5,8 +6,19 @@ import { Link } from 'react-scroll';
 const pages = ['Sobre mi', 'Proyectos', 'Contacto'];
 
 const Header = () => {
+  const [color, setColor] = useState(false);
+
+  const changeColor = () =>{
+    if(window.scrollY >= 90) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  }
+  window.addEventListener('scroll', changeColor);
+
   return (
-    <AppBar position="fixed" style={{ backgroundColor: 'rgba(62, 66, 73, 0.91)' }}>
+    <AppBar position="fixed" className={color ? 'header header-bg' : 'header'}>
       <Container maxWidth="xl">
         <Toolbar disableGutters style={{ minHeight: 56 }}>
 

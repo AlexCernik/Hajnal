@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
+  background-color: #111826;
+  /* 282c34 rgb(40, 44, 52) */
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -13,4 +14,15 @@ body {
 .active {
   color: #61dafb!important;
   font-weight: bold;
+}
+
+.header {
+  transition: .3s ease-in!important;
+  background-color: transparent!important; 
+  box-shadow: none!important;
+}
+
+.header-bg {
+  background-color: rgba(40, 44, 52, 0.91)!important;
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)!important;
 }

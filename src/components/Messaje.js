@@ -1,45 +1,87 @@
-import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
+import React from 'react';
+import { Container, Stack, Box, Typography } from '@mui/material'
 
-const Content = () => {
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('md'));
-
+const Message = () => {
   return (
-    <Box
-      height={300}
-      width='100%'
-      style={{ display: 'flex', position: 'relative', justifyContent: 'center' }}
-    >
-      <img
-        style={{
-          margin: 0,
-          width: matches ? '70%' : '100%',
-          height: '100%',
-          objectFit: 'cover',
-          fontSize: 0,
-          borderRadius: 8,
-          boxShadow: '0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)'
-        }}
-        alt='hajnal'
-        src='https://scontent.fhio3-1.fna.fbcdn.net/v/t1.6435-9/104196243_176934383902033_6873843622387829362_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=e3f864&_nc_ohc=NpyX4qqIE6MAX8ZyBYH&_nc_ht=scontent.fhio3-1.fna&oh=00_AT-O3aPmgpXUHKs7fSzc5MGVzkNF7WifPIHuuMsvZ1rh6Q&oe=62F5854F'
-      />
-      <Box
-        style={{
-          position: 'absolute',
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundImage: "linear-gradient(to top, rgb(40, 44, 53)60%, rgba(0, 0, 0, .0))",
-          borderBottomLeftRadius: 6,
-          borderBottomRightRadius: 6,
-          paddingTop: 12,
-          paddingBottom: 2
-        }}>
-        <Typography component='p' fontSize={15} textAlign='center'>
-        «Cuando estoy haciendo arte, no tengo absolutamente responsabilidad social alguna. Es como soñar.»{<br />}David Cronenberg
-        </Typography>
-      </Box>
-    </Box>
+    <Container>
+      <Stack
+        height={400}
+        width='100%'
+        direction='column'
+        alignItems='center'
+        justifyContent='center'
+        position='relative'
+      >
+        <Box width={{ xs: '100%', sm:'95%', md: '80%' }} height={400} position='relative' display='flex' alignItems='center' justifyContent='center'>
+          <Box
+            style={{
+              position: 'absolute',
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right: 0,
+              backgroundColor: "rgba(0, 0, 0, .5)"
+            }} />
+
+          <Box
+            style={{
+              position: 'absolute',
+              width: '100%',
+              top: -15,
+              backgroundImage: "linear-gradient(to bottom, rgb(17, 24, 38)50%, rgba(0, 0, 0, .0))",
+              paddingTop: 30,
+              paddingBottom: 12
+            }} />
+
+          <Box
+            style={{
+              position: 'absolute',
+              height: '100%',
+              left: -15,
+              backgroundImage: "linear-gradient(to right, rgb(17, 24, 38)50%, rgba(0, 0, 0, .0))",
+              paddingLeft: 30,
+              paddingRight: 12
+            }} />
+
+          <Box
+            style={{
+              position: 'absolute',
+              height: '100%',
+              right: -15,
+              backgroundImage: "linear-gradient(to left, rgb(17, 24, 38)50%, rgba(0, 0, 0, .0))",
+              paddingRight: 30,
+              paddingLeft: 12
+            }} />
+
+          <Box
+            style={{
+              position: 'absolute',
+              width: '100%',
+              bottom: -15,
+              backgroundImage: "linear-gradient(to top, rgb(17, 24, 38)50%, rgba(0, 0, 0, .0))",
+              paddingTop: 30,
+              paddingBottom: 12
+            }} />
+
+          <img
+            style={{
+              margin: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              fontSize: 0,
+            }}
+            alt='hajnal'
+            src='https://scontent.fhio3-1.fna.fbcdn.net/v/t1.6435-9/104196243_176934383902033_6873843622387829362_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=e3f864&_nc_ohc=NpyX4qqIE6MAX8ZyBYH&_nc_ht=scontent.fhio3-1.fna&oh=00_AT-O3aPmgpXUHKs7fSzc5MGVzkNF7WifPIHuuMsvZ1rh6Q&oe=62F5854F'
+          />
+          <Box width={{ xs: '90%', sm:'75%', md: '60%' }} style={{ position: 'absolute' }}>
+            <Typography component='p' fontSize={18} textAlign='center' position='relative'>
+              «Cuando estoy haciendo arte, no tengo absolutamente responsabilidad social alguna. Es como soñar.»{<br />}<b>David Cronenberg</b>
+            </Typography>
+          </Box>
+        </Box>
+      </Stack>
+    </Container>
   );
 }
-export default Content;
+export default Message;
