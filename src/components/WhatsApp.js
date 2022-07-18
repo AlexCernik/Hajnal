@@ -4,7 +4,7 @@ import { WhatsappOutlined } from '@mui/icons-material';
 
 const WhatsApp = () => {
   return (
-    <Link className='WhatsApp'>
+    <Link href='https://wa.me/send?phone=5491144076977' className='WhatsApp'>
       <WhatsappOutlined />
     </Link>
   );

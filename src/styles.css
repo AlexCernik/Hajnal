@@ -17,7 +17,7 @@ body {
 }
 
 .header {
-  transition: .3s ease-in!important;
+  transition: .3s  linear!important;
   background-color: transparent!important; 
   box-shadow: none!important;
 }
@@ -46,6 +46,7 @@ body {
 	animation-duration: 1.5s;
 	animation-timing-function: ease-out;
 	animation-iteration-count: infinite;
+	cursor: pointer;
 }
 
 @keyframes pulse {
