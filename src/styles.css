@@ -57,3 +57,14 @@ body {
 		box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
 	}
 }
+
+.img-hover img {
+	-webkit-filter: grayscale(100%) blur(3px);
+	filter: grayscale(100%) blur(3px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.img-hover:hover img {
+	-webkit-filter: grayscale(0) blur(0);
+	filter: grayscale(0) blur(0);
+}
