@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/Hajnal/static/css/main.76302466.css",
-    "main.js": "/Hajnal/static/js/main.304cdebc.js",
+    "main.js": "/Hajnal/static/js/main.bba8687f.js",
+    "static/media/logo.png": "/Hajnal/static/media/logo.5a935b13905e48a2f051.png",
     "index.html": "/Hajnal/index.html"
   },
   "entrypoints": [
     "static/css/main.76302466.css",
-    "static/js/main.304cdebc.js"
+    "static/js/main.bba8687f.js"
   ]
 }
