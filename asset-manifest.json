@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/Hajnal/static/css/main.6c2ecaa5.css",
-    "main.js": "/Hajnal/static/js/main.222afd2e.js",
+    "main.css": "/Hajnal/static/css/main.1bb6066b.css",
+    "main.js": "/Hajnal/static/js/main.e5f28363.js",
     "index.html": "/Hajnal/index.html"
   },
   "entrypoints": [
-    "static/css/main.6c2ecaa5.css",
-    "static/js/main.222afd2e.js"
+    "static/css/main.1bb6066b.css",
+    "static/js/main.e5f28363.js"
   ]
 }
