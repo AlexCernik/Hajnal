@@ -9,7 +9,7 @@ const Contact = () => {
       <Container maxWidth='md'>
         <Typography textAlign='center' mb={1}>
           Trabajos en madera, arcilla, metales, pinturas. {<br />}
-          <i>Para saber más sobre los distintos tipos de trabajos que realizo y como puedes adquirirlos contáctame
+          <i>Para saber más sobre los distintos tipos de trabajos que realizo y cómo poder adquirirlos, contáctame
           en cualquiera de los siguientes canales</i>.
         </Typography>
       </Container>
