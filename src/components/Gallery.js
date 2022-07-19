@@ -1,10 +1,12 @@
 import React from 'react';
 import { Container, Box, ImageList, Typography, ImageListItem, useMediaQuery, useTheme } from '@mui/material'
+import ImageModal from './ImageModal';
 
 const Gallery = () => {
   const theme = useTheme();
   const xsUp = useMediaQuery(theme.breakpoints.only('xs'));
   const lgDown = useMediaQuery(theme.breakpoints.down('lg'));
+  const mdUp = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
     <Container maxWidth='lg'>
@@ -13,6 +15,7 @@ const Gallery = () => {
         <ImageList style={{ width: '100%', height: '100%', paddingBottom: 10 }} gap={8} cols={xsUp ? 1 : lgDown ? 2 : 3}>
           {itemData.map((item, index) => (
             <ImageListItem key={index} className='img-hover' style={{ height: 260, borderRadius: 6, boxShadow: '0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)' }}>
+              {mdUp && <ImageModal image={item.img} alt='item.title' />}
               <img
                 src={item.img}
                 alt={item.title}
