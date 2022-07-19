@@ -5,13 +5,23 @@ import CloseIcon from '@mui/icons-material/Close';
 
 const boxStyle = {
   position: 'absolute',
-  top: '50%',
+  top: 0,
   left: '50%',
-  transform: 'translate(-50%, -50%)',
-  maxHeight: '100vh',
-  maxWidth: '100%',
+  bottom: 0,
+  right: 0,
+  transform: 'translate(-50%, 0%)',
   boxShadow: 24,
 };
+// const boxStyle = {
+//   position: 'absolute',
+//   top: '50%',
+//   left: '50%',
+//   transform: 'translate(-50%, -50%)',
+//   transform: 'translate(-50%, -50%)',
+//   maxHeight: '100vh',
+//   maxWidth: '100%',
+//   boxShadow: 24,
+// };
 const buttonStyle = {
   color: '#FFFFFF',
   backgroundColor: 'rgba(0, 0, 0, .4)',
