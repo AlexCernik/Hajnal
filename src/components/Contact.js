@@ -8,8 +8,9 @@ const Contact = () => {
       <Typography textAlign='center' fontWeight='bold' variant="h5" component='h3' mb={4}>Contáctame</Typography>
       <Container maxWidth='md'>
         <Typography textAlign='center' mb={1}>
-          Trabajos en madera, arcilla, metales, pinturas. Para saber más sobre los trabajos que realizo puedes contactarme
-          en cualquiera de los siguientes canales.
+          Trabajos en madera, arcilla, metales, pinturas. {<br />}
+          <i>Para saber más sobre los distintos tipos de trabajos que realizo y como puedes adquirirlos contáctame
+          en cualquiera de los siguientes canales</i>.
         </Typography>
       </Container>
       <Container maxWidth="xs" style={{ alignItems: 'center', marginTop: 32, paddingLeft: 30, paddingRight: 30 }}>
