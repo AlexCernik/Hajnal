@@ -86,12 +86,11 @@ body {
 }  
 
 .gallery{
-	position: relative;
-	transform: translateY(150px);
+	transform: translateZ(200px);
 	opacity: 0;
 	transition: 2s all ease;
 }
 .gallery.act{
-	transform: translateY(0);
+	transform: translateX(0);
 	opacity: 1;
 }
