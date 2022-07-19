@@ -86,7 +86,7 @@ body {
 }  
 
 .gallery{
-	transform: translateZ(200px);
+	transform: translateZ(250px);
 	opacity: 0;
 	transition: 2s all ease;
 }
