@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Box, ImageList, Typography, ImageListItem, useMediaQuery, useTheme } from '@mui/material'
 import ImageModal from './ImageModal';
 
@@ -8,8 +8,28 @@ const Gallery = () => {
   const lgDown = useMediaQuery(theme.breakpoints.down('lg'));
   const mdUp = useMediaQuery(theme.breakpoints.up('md'));
 
+  function reveal() {
+    var reveals = document.querySelectorAll(".gallery");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 260;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("act");
+      } else {
+        reveals[i].classList.remove("act");
+      }
+    }
+  }
+
+  useEffect(() => {
+    window.removeEventListener('scroll', reveal);
+    window.addEventListener('scroll', reveal, { passive: true });
+    return () => window.removeEventListener('scroll', reveal);
+  }, []);
+
   return (
-    <Container maxWidth='lg'>
+    <Container maxWidth='lg' className='gallery'>
       <Box id='2' mb={10}>
         <Typography textAlign='center' fontWeight='bold' variant="h5" component='h3'>Mis proyectos</Typography>
         <ImageList style={{ width: '100%', height: '100%', paddingBottom: 10 }} gap={8} cols={xsUp ? 1 : lgDown ? 2 : 3}>

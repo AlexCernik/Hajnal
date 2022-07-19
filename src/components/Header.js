@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles.css';
 import { AppBar, Toolbar, Container, Stack } from '@mui/material'
 import { Link } from 'react-scroll';
@@ -8,14 +8,19 @@ const pages = ['Sobre mi', 'Proyectos', 'Contacto'];
 const Header = () => {
   const [color, setColor] = useState(false);
 
-  const changeColor = () =>{
-    if(window.scrollY >= 90) {
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
       setColor(true);
     } else {
       setColor(false);
     }
   }
-  window.addEventListener('scroll', changeColor);
+
+  useEffect(() => {
+    window.removeEventListener('scroll', changeColor);
+    window.addEventListener('scroll', changeColor, { passive: true });
+    return () => window.removeEventListener('scroll', changeColor);
+  }, []);
 
   return (
     <AppBar position="fixed" className={color ? 'header header-bg' : 'header'}>
