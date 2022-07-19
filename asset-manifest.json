@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/Hajnal/static/css/main.41daec12.css",
-    "main.js": "/Hajnal/static/js/main.012772fc.js",
+    "main.css": "/Hajnal/static/css/main.6d22ad36.css",
+    "main.js": "/Hajnal/static/js/main.96bc7d2b.js",
     "static/media/logo.png": "/Hajnal/static/media/logo.14cecd6488bb02a337cf.png",
     "index.html": "/Hajnal/index.html"
   },
   "entrypoints": [
-    "static/css/main.41daec12.css",
-    "static/js/main.012772fc.js"
+    "static/css/main.6d22ad36.css",
+    "static/js/main.96bc7d2b.js"
   ]
 }
